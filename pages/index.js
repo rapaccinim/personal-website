@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import {Header} from "../components/header/header";
 import styles from '../styles/Home.module.css'
 
 const Home = () => {
@@ -9,8 +10,16 @@ const Home = () => {
         <title>Marco Rapaccini - Web &amp; Product Developer</title>
         <meta name="description" content="Marco Rapaccini - Web and Product Developer" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
       </Head>
-
+      <Header/>
       <main className={styles.main}>
         <Image src="/marco-rapaccini-web-product-developer-logo.jpg" alt="Marco Rapaccini - Web and Product Developer logo" width={301} height={127} />
         <h1 className={styles.title}>
