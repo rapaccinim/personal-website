@@ -5,22 +5,27 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export const Header = () => {
     return (
-        <div className={styles.header}>
-            <Image
-                src="/marco-rapaccini-web-product-developer-logo.jpg"
-                alt="Marco Rapaccini - Web and Product Developer logo"
-                width={301}
-                height={127}
-            />
-            <div>
-                <a href="#about" target="_self" rel="canonical">About</a>
-                <a href="#work" target="_self" rel="canonical">Work</a>
-                <a href="#contact" target="_self" rel="canonical">Contact</a>
+        <header className={styles.header}>
+            <div className={styles.header__logo}>
+                <Image
+                    src="/marco-rapaccini-web-product-developer-logo.jpg"
+                    alt="Marco Rapaccini - Web and Product Developer logo"
+                    width={301}
+                    height={127}
+                />
             </div>
-            <div>
+            <div className={styles.header__mainNav}>
+                <nav>
+                    <ul>
+                        <li><a href="#about" target="_self" rel="canonical">About</a></li>
+                        <li><a href="#work" target="_self" rel="canonical">Work</a></li>
+                        <li><a href="#contact" target="_self" rel="canonical">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div className={styles.header__socialIcons}>
                 <LinkedInIcon/>
                 <GitHubIcon/>
-
             </div>
-        </div>)
+        </header>)
 }
