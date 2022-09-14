@@ -87,7 +87,9 @@ const Home = () => {
           )}
         </div>
       </main>
-      <footer className={styles.footer}>
+      <footer
+          className={styles.footer}
+      >
         <a
             href="https://www.google.co.uk/maps/place/New+Inn+Yard,+Kendal/@54.3255514,-2.748753,19.81z/"
             target="_blank"
