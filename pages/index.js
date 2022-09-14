@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Carbonbadge from "react-carbonbadge"
 
 const Home = () => {
 
@@ -87,6 +88,7 @@ const Home = () => {
         >
           🌲 This is a minimalistic website with low impact on the environment
         </p>
+        <Carbonbadge darkMode={true} />
         <p
             className={styles.description}
         >
