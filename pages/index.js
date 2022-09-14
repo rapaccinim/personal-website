@@ -3,16 +3,59 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home = () => {
+
+  const linksList = [
+    {
+      href: 'https://www.linkedin.com/in/marco-rapaccini/?locale=en_US',
+      title: '🔗 LinkedIn',
+      description: 'Join my professional network and learn something new everyday',
+      ariaLabel: 'Connect with me on LinkedIn',
+    },
+    {
+      href: 'https://github.com/rapaccinim',
+      title: '🐈 GitHub',
+      description: 'My code base repos: interesting or boring. But, hey, it compiles!',
+      ariaLabel: 'Connect with me on GitHub',
+    },
+    {
+      href: 'https://rapaccinim.medium.com/',
+      title: '✍️ Medium',
+      description: 'Read my latest blog articles about software engineering on Medium',
+      ariaLabel: 'Connect with me on Medium',
+    },
+    {
+      href: 'https://twitter.com/@rapaccinim',
+      title: '🐦 Twitter',
+      description: 'Follow me to be updated on latest tech trends and random stuff',
+      ariaLabel: 'Connect with me on Twitter',
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Marco Rapaccini - Web &amp; Product Development</title>
-        <meta name="description" content="Marco Rapaccini - Web and Product Development" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          Marco Rapaccini - Web &amp; Product Development
+        </title>
+        <meta
+            name="description"
+            content="Marco Rapaccini - Web and Product Development"
+        />
+        <link
+            rel="icon"
+            href="/favicon.ico"
+        />
       </Head>
       <main className={styles.main}>
-        <Image src="/marco-rapaccini-web-product-developer-logo.jpg" alt="Marco Rapaccini - Web and Product Development logo" width={301} height={127} />
-        <h1 className={styles.title}>
+        <Image
+            src="/marco-rapaccini-web-product-developer-logo.jpg"
+            alt="Marco Rapaccini - Web and Product Development logo"
+            width={301}
+            height={127}
+        />
+        <h1
+            className={styles.title}
+        >
           Marco Rapaccini
           <br/>
           Web &amp; Product Development
@@ -24,31 +67,26 @@ const Home = () => {
           🌲 This is a minimalistic website that has a low impact on the environment
         </p>
         <p className={styles.description}>
-        📥 <b>Connect with me</b>, have a look at the following links 👇
+          📥 <b>Connect with me</b>, have a look at the following links 👇
         </p>
-        <div className={styles.grid}>
-          <a href="https://www.linkedin.com/in/marco-rapaccini/?locale=en_US" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>🔗 LinkedIn &rarr;</h2>
-            <p>Join my professional network and learn something new everyday</p>
-          </a>
-          <a href="https://twitter.com/@rapaccinim" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>🐦 Twitter &rarr;</h2>
-            <p>Follow me to be updated on latest development trends and tricks</p>
-          </a>
-          <a
-            href="https://rapaccinim.medium.com/" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>✍️ Medium &rarr;</h2>
-            <p>Read my latest blog articles about software engineering, startup and team work on Medium</p>
-          </a>
-          <a href="https://github.com/rapaccinim" className={styles.card} target="_blank" rel="noopener noreferrer">
-            <h2>🐈 GitHub &rarr;</h2>
-            <p>
-              Explore my code repos: some are interesting, some are boring. But, hey, it compiles!
-            </p>
-          </a>
+        <div
+          className={styles.grid}
+        >
+          {linksList.map(singleLink =>
+            <a
+                href={singleLink.href}
+                className={styles.card}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={singleLink.ariaLabel}
+                key={singleLink.href}
+            >
+              <h2>{singleLink.title} &rarr;</h2>
+              <p>{singleLink.description}</p>
+            </a>
+          )}
         </div>
       </main>
-
       <footer className={styles.footer}>
         <a
             href="https://www.google.co.uk/maps/place/New+Inn+Yard,+Kendal/@54.3255514,-2.748753,19.81z/"
@@ -61,5 +99,4 @@ const Home = () => {
     </div>
   )
 }
-
 export default Home
