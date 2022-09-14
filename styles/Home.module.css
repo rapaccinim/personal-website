@@ -113,13 +113,21 @@
 }
 
 @media (max-width: 600px) {
+  .main {
+    padding: 2rem 0;
+  }
   .grid {
     width: 100%;
     flex-direction: column;
   }
 
+  .title {
+    font-size: 3rem;
+  }
+
   .card{
-    width: 70%;
+    width: 90%;
+    margin: 1rem 0;
   }
 }
 
