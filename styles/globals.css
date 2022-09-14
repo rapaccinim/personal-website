@@ -5,11 +5,9 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
-
 a {
   color: inherit;
 }
-
 * {
   box-sizing: border-box;
 }

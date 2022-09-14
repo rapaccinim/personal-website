@@ -14,7 +14,7 @@ const Home = () => {
     {
       href: 'https://github.com/rapaccinim',
       title: '🐈 GitHub',
-      description: 'My code base repos: interesting or boring. But, hey, it compiles!',
+      description: 'Have a look at my code base repos: interesting or boring stuff. But, hey, it compiles!',
       ariaLabel: 'Connect with me on GitHub',
     },
     {
@@ -28,6 +28,19 @@ const Home = () => {
       title: '🐦 Twitter',
       description: 'Follow me to be updated on latest tech trends and random stuff',
       ariaLabel: 'Connect with me on Twitter',
+    },
+  ];
+
+  const footerLinksLists = [
+    {
+      href: 'https://www.google.co.uk/maps/place/New+Inn+Yard,+Kendal/@54.3255514,-2.748753,19.81z/',
+      title: '🏢 Office',
+      ariaLabel: 'See where my office is on Google Maps',
+    },
+    {
+      href: 'https://github.com/rapaccinim/rapaccinim#marco-rapaccini',
+      title: '💼 My CV',
+      ariaLabel: 'Read my CV on GitHub',
     },
   ];
 
@@ -60,13 +73,19 @@ const Home = () => {
           <br/>
           Web &amp; Product Development
         </h1>
-        <p className={styles.description}>
+        <p
+            className={styles.description}
+        >
           ✨ I transform a vision into human-friendly, working technology
         </p>
-        <p className={styles.description}>
-          🌲 This is a minimalistic website that has a low impact on the environment
+        <p
+            className={styles.description}
+        >
+          🌲 This is a minimalistic website with low impact on the environment
         </p>
-        <p className={styles.description}>
+        <p
+            className={styles.description}
+        >
           📥 <b>Connect with me</b>, have a look at the following links 👇
         </p>
         <div
@@ -90,13 +109,20 @@ const Home = () => {
       <footer
           className={styles.footer}
       >
-        <a
-            href="https://www.google.co.uk/maps/place/New+Inn+Yard,+Kendal/@54.3255514,-2.748753,19.81z/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-          Office
-        </a>
+        {footerLinksLists.map( singleFooterLink =>
+          <div
+              key={singleFooterLink.href}
+          >
+            <a
+                href={singleFooterLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={singleFooterLink.ariaLabel}
+            >
+              {singleFooterLink.title}
+            </a>
+          </div>
+        )}
       </footer>
     </div>
   )
