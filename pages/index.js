@@ -86,7 +86,7 @@ const Home = () => {
         <p
             className={styles.description}
         >
-          🌲 This is a minimalistic website with low impact on the environment
+          🌲 This is a minimalist website with low impact on the environment
         </p>
         <Carbonbadge darkMode={true} />
         <p
