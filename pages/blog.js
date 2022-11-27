@@ -1,25 +1,25 @@
 import fs from 'fs';
-import Link from 'next/link';
-import {getPostObject, getSlug} from "../utils/utils";
+import {generateUUID, getPostObject, getSlug} from "../utils/utils";
+import BlogArticle from "../components/blog-article";
 
 const Blog = ({posts}) => {
+
     return (
-        <div>
+        <section
+            className="blog"
+        >
             {posts.map(post => {
                 const {slug, metadata} = post
                 const {title, author, date, bannerImage, tags} = metadata
-                return <article key={title}>
-                    <Link
-                        href={`/posts/${slug}`}
-                        passHref
-                    >
-                        <h1>{title}</h1>
-                    </Link>
-                    <h3>{author}</h3>
-                    <h3>{date}</h3>
-                </article>
+                return (
+                    <BlogArticle
+                        key={generateUUID()}
+                        metadata={metadata}
+                        slug={slug}
+                    />
+                )
             })}
-        </div>
+        </section>
     )
 }
 export default Blog;

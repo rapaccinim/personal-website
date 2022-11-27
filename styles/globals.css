@@ -62,6 +62,14 @@ header .wrapper {
   display: flex;
   border-bottom: 1px solid #eaeaea;
 }
+section.blog{
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  align-self: flex-start;
+}
 
 @media (max-width: 900px) and (min-width: 401px){
   .wrapper {
