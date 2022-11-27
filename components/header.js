@@ -33,6 +33,7 @@ const Header = () => {
                     <Link
                         href="/"
                         aria-label="Home"
+                        passHref
                     >
                         <div
                             className="logo-wrapper"
