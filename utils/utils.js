@@ -13,3 +13,12 @@ export const generateUUID = (optionalString = 'The Office (USA) is the best tv s
         randomString = randomString + mixedString.charAt(getRandomInt(0, mixedString.length - 1));
     return randomString;
 }
+
+export const getPostObject = (markdownFile) => {
+    // extract the metadata part from the markdown file and remove new line chars, tabs and back quotes
+    const postArray = markdownFile.split("-----").slice(1);
+    return {
+        metadata: JSON.parse(postArray[0].replace(/[\n\t`]/g, '').trim()),
+        content: postArray[1]
+    }
+}
