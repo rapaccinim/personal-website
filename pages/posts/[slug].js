@@ -1,5 +1,5 @@
 import fs from "fs";
-import {generateUUID, getPostObject} from "../../utils/utils";
+import {generateUUID, getPostObject, getSlug} from "../../utils/utils";
 import parse from "html-react-parser";
 import {micromark} from "micromark";
 
@@ -26,7 +26,7 @@ export const getStaticPaths = async () => {
     const files = fs.readdirSync("posts");
     const paths = files.map((fileName) => ({
         params: {
-            slug: fileName.replace(".md", ""),
+            slug: getSlug(fileName),
         },
     }));
     return {

@@ -22,3 +22,7 @@ export const getPostObject = (markdownFile) => {
         content: postArray[1]
     }
 }
+
+export const getSlug = (fileName) => {
+    return fileName.replace(".md", "");
+}
