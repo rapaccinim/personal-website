@@ -10,30 +10,36 @@ const Home = () => {
     }
 
   const linksList = [
-    {
-      href: 'https://www.linkedin.com/in/marco-rapaccini/?locale=en_US',
-      title: '🔗 LinkedIn',
-      description: 'Join my professional network and learn something new everyday',
-      ariaLabel: 'Connect with me on LinkedIn',
-    },
-    {
-      href: 'https://github.com/rapaccinim',
-      title: '🐈 GitHub',
-      description: 'Have a look at my code base repos: interesting or boring stuff. But, hey, it compiles!',
-      ariaLabel: 'Connect with me on GitHub',
-    },
-    {
-      href: 'https://rapaccinim.medium.com/',
-      title: '✍️ Medium',
-      description: 'Read my latest blog articles about software engineering on Medium',
-      ariaLabel: 'Connect with me on Medium',
-    },
-    {
-      href: 'https://twitter.com/@rapaccinim',
-      title: '🐦 Twitter',
-      description: 'Follow me to be updated on latest tech trends and random stuff',
-      ariaLabel: 'Connect with me on Twitter',
-    },
+      {
+          href: 'blog',
+          title: '✍️ Blog',
+          description: 'Read my latest blog articles about life, code and other stuff',
+          ariaLabel: 'Read my blog articles on this website',
+      },
+      {
+          href: 'https://www.linkedin.com/in/marco-rapaccini/?locale=en_US',
+          title: '🔗 LinkedIn',
+          description: 'Probably the best way to contact me',
+          ariaLabel: 'Connect with me on LinkedIn',
+      },
+      {
+          href: 'https://github.com/rapaccinim',
+          title: '🐈 GitHub',
+          description: 'Hey, it compiles! Wait, why?',
+          ariaLabel: 'Connect with me on GitHub',
+      },
+      {
+          href: 'https://rapaccinim.medium.com/',
+          title: '📖️ Medium',
+          description: 'Read my technical articles on Medium',
+          ariaLabel: 'Follow me on Medium',
+      },
+      {
+          href: 'https://twitter.com/@rapaccinim',
+          title: '🐦 Twitter',
+          description: "I don't have a blue check but I post good content",
+          ariaLabel: 'Connect with me on Twitter',
+      },
   ];
 
   return (
@@ -61,7 +67,7 @@ const Home = () => {
         <p
             className={styles.description}
         >
-          📥 <b>Connect with me</b>, have a look at the following links 👇
+            👇 <b>Scroll down</b> and explore <i>my world</i>
         </p>
         <div
             className={styles.grid}
