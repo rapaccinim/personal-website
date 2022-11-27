@@ -11,3 +11,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container div {
+  max-width: 50rem;
+  width: calc(50vw - 2.5rem);
+}
+
+@media (max-width: 900px) and (min-width: 401px){
+  .main-container div {
+    max-width: 60rem;
+    width: calc(80vw - 2.5rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container div {
+    max-width: 80rem;
+    width: calc(100vw - 2.5rem);
+  }
+}

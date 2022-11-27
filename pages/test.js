@@ -19,16 +19,17 @@ const Test = () => {
     const content = postObject.content;
 
     return (
-        <div>
+        <div className="main-container">
             <div>
-                <p>Metadata</p>
                 <div>
                     {Object.entries(metadata).map( ([key, value]) =>
                         <p key={generateUUID(key)}>{value}</p>
                     )}
                 </div>
+                <div>
+                    {parse(micromark(content))}
+                </div>
             </div>
-            {parse(micromark(content))}
         </div>
     );
 }
