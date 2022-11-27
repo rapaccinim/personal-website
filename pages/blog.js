@@ -8,17 +8,15 @@ const Blog = ({posts}) => {
         <section
             className="blog"
         >
-            {posts.map(post => {
-                const {slug, metadata} = post
-                const {title, author, date, bannerImage, tags} = metadata
-                return (
-                    <BlogArticle
-                        key={generateUUID()}
-                        metadata={metadata}
-                        slug={slug}
-                    />
-                )
-            })}
+            {posts
+                .sort((post, anotherPost) => new Date(anotherPost.metadata.date) - new Date(post.metadata.date))
+                .map(post =>
+                <BlogArticle
+                    key={generateUUID()}
+                    metadata={post.metadata}
+                    slug={post.slug}
+                />
+            )}
         </section>
     )
 }
