@@ -1,6 +1,13 @@
 import styles from '../styles/Home.module.css'
+import HeadSEO from "../components/head-seo";
 
 const Home = () => {
+
+    const seoData = {
+        title: "Home",
+        description: "Marco Rapaccini - Web & Product Development for your idea",
+        pageURL: "home"
+    }
 
   const linksList = [
     {
@@ -31,6 +38,9 @@ const Home = () => {
 
   return (
       <>
+          <HeadSEO
+              seoData={seoData}
+          />
         <h1
             className={styles.title}
         >
