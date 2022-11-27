@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Carbonbadge from "react-carbonbadge"
 
 const Home = () => {
 
@@ -33,73 +30,54 @@ const Home = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>
-          Marco Rapaccini - Web &amp; Product Development
-        </title>
-        <meta
-            name="description"
-            content="Marco Rapaccini - Web and Product Development"
-        />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <link
-            rel="icon"
-            href="/favicon.ico"
-        />
-      </Head>
-      <main className={styles.main}>
-        <Image
-            src="/marco-rapaccini-web-product-developer-logo.jpg"
-            alt="Marco Rapaccini - Web and Product Development logo"
-            width={301}
-            height={127}
-        />
-        <h1
-            className={styles.title}
-        >
-          Marco Rapaccini
-          <br/>
-          Web &amp; Product Development
-        </h1>
-        <p
-            className={styles.description}
-        >
-          ✨ I transform a vision into human-friendly, working technology
-        </p>
-        <p
-            className={styles.description}
-        >
-          🌲 This is a minimalist website with low impact on the environment
-        </p>
-        <Carbonbadge darkMode={true} />
-        <p
-            className={styles.description}
-        >
-          📥 <b>Connect with me</b>, have a look at the following links 👇
-        </p>
+      <main
+        className="main-container"
+      >
         <div
-          className={styles.grid}
+         className="wrapper"
         >
-          {linksList.map(singleLink =>
-            <a
-                href={singleLink.href}
-                className={styles.card}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={singleLink.ariaLabel}
-                key={singleLink.href}
-            >
-              <h2>{singleLink.title} &rarr;</h2>
-              <p>{singleLink.description}</p>
-            </a>
-          )}
+          <h1
+              className={styles.title}
+          >
+            Marco Rapaccini
+            <br/>
+            Web &amp; Product Development
+          </h1>
+          <p
+              className={styles.description}
+          >
+            ✨ I transform a vision into human-friendly, working technology
+          </p>
+          <p
+              className={styles.description}
+          >
+            🌲 This is a minimalist website with low impact on the environment
+          </p>
+          <p
+              className={styles.description}
+          >
+            📥 <b>Connect with me</b>, have a look at the following links 👇
+          </p>
+          <div
+              className={styles.grid}
+          >
+            {linksList.map(singleLink =>
+                <a
+                    href={singleLink.href}
+                    className={styles.card}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={singleLink.ariaLabel}
+                    key={singleLink.href}
+                >
+                  <h2>{singleLink.title} &rarr;</h2>
+                  <p>{singleLink.description}</p>
+                </a>
+            )}
+          </div>
         </div>
+
       </main>
-    </div>
   )
 }
 export default Home

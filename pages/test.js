@@ -20,7 +20,7 @@ const Test = () => {
 
     return (
         <div className="main-container">
-            <div>
+            <div className="wrapper">
                 <div>
                     {Object.entries(metadata).map( ([key, value]) =>
                         <p key={generateUUID(key)}>{value}</p>
