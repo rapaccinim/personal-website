@@ -69,6 +69,15 @@ section.blog{
 
 article {
   align-self: flex-start;
+  margin: 1rem 0;
+}
+
+article .tags span {
+  margin-right: 0.5rem;
+}
+
+article h2 {
+  margin: 0;
 }
 
 @media (max-width: 900px) and (min-width: 401px){

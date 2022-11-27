@@ -5,7 +5,9 @@ const BlogArticle = ({metadata, slug}) => {
     const {title, author, date, bannerImage, tags} = metadata
     return (
         <article>
-            <div>
+            <div
+                className="tags"
+            >
                 {tags.map( tag => <span key={generateUUID()}>{tag}</span>)}
             </div>
             <Link
@@ -17,7 +19,7 @@ const BlogArticle = ({metadata, slug}) => {
                     </div>
                 </a>
             </Link>
-            <h3>{date}</h3>
+            <span>{date}</span>
         </article>
     )
 }
