@@ -23,6 +23,10 @@ header{
   flex: 1;
 }
 
+.logo-wrapper {
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -49,6 +53,8 @@ footer {
 
 .footer-message {
   text-align: center;
+  border-top: 1px solid #eaeaea;
+  padding: 1rem 0;
 }
 
 header .wrapper {

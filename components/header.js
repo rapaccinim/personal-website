@@ -25,21 +25,25 @@ const Header = () => {
     return(
         <header>
             <div
-                className={"wrapper"}
+                className="wrapper"
             >
                 <div
-                    className={"header-logo"}
+                    className="header-logo"
                 >
                     <Link
                         href="/"
                         aria-label="Home"
                     >
-                        <Image
-                            src="/marco-rapaccini-web-product-development-header-logo.webp"
-                            width="40px"
-                            height="40px"
-                            alt="Marco Rapaccini Web Product Development Header Logo"
-                        />
+                        <div
+                            className="logo-wrapper"
+                        >
+                            <Image
+                                src="/marco-rapaccini-web-product-development-header-logo.webp"
+                                width="40px"
+                                height="40px"
+                                alt="Marco Rapaccini Web Product Development Header Logo"
+                            />
+                        </div>
                     </Link>
                 </div>
                 <nav>

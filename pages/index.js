@@ -30,54 +30,47 @@ const Home = () => {
   ];
 
   return (
-      <main
-        className="main-container"
-      >
-        <div
-         className="wrapper"
+      <>
+        <h1
+            className={styles.title}
         >
-          <h1
-              className={styles.title}
-          >
-            Marco Rapaccini
-            <br/>
-            Web &amp; Product Development
-          </h1>
-          <p
-              className={styles.description}
-          >
-            ✨ I transform a vision into human-friendly, working technology
-          </p>
-          <p
-              className={styles.description}
-          >
-            🌲 This is a minimalist website with low impact on the environment
-          </p>
-          <p
-              className={styles.description}
-          >
-            📥 <b>Connect with me</b>, have a look at the following links 👇
-          </p>
-          <div
-              className={styles.grid}
-          >
-            {linksList.map(singleLink =>
-                <a
-                    href={singleLink.href}
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={singleLink.ariaLabel}
-                    key={singleLink.href}
-                >
-                  <h2>{singleLink.title} &rarr;</h2>
-                  <p>{singleLink.description}</p>
-                </a>
-            )}
-          </div>
+          Marco Rapaccini
+          <br/>
+          Web &amp; Product Development
+        </h1>
+        <p
+            className={styles.description}
+        >
+          ✨ I transform a vision into human-friendly, working technology
+        </p>
+        <p
+            className={styles.description}
+        >
+          🌲 This is a minimalist website with low impact on the environment
+        </p>
+        <p
+            className={styles.description}
+        >
+          📥 <b>Connect with me</b>, have a look at the following links 👇
+        </p>
+        <div
+            className={styles.grid}
+        >
+          {linksList.map(singleLink =>
+              <a
+                  href={singleLink.href}
+                  className={styles.card}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={singleLink.ariaLabel}
+                  key={singleLink.href}
+              >
+                <h2>{singleLink.title} &rarr;</h2>
+                <p>{singleLink.description}</p>
+              </a>
+          )}
         </div>
-
-      </main>
+      </>
   )
 }
 export default Home
