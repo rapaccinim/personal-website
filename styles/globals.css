@@ -77,7 +77,7 @@ article .tags span {
 }
 
 article h2 {
-  margin: 0;
+  margin: 0.5rem 0;
 }
 
 @media (max-width: 900px) and (min-width: 401px){
