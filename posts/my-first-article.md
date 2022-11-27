@@ -1,9 +1,9 @@
 -----
 ```
 {
-    "title": "This is an example post",
+    "title": "My first article",
     "author": "Marco Rapaccini",
-    "date": "2022-11-27",
+    "date": "2022-11-26",
     "bannerImage": "url-to-image.png",
     "tags": ["tag1", "tag2"]
 }
