@@ -15,6 +15,7 @@ const Home = () => {
           title: '✍️ Blog',
           description: 'Read my latest blog articles about life, code and other stuff',
           ariaLabel: 'Read my blog articles on this website',
+          target: '_self',
       },
       {
           href: 'https://www.linkedin.com/in/marco-rapaccini/?locale=en_US',
@@ -76,7 +77,7 @@ const Home = () => {
               <a
                   href={singleLink.href}
                   className={styles.card}
-                  target="_blank"
+                  target={singleLink.target || "_blank"}
                   rel="noopener noreferrer"
                   aria-label={singleLink.ariaLabel}
                   key={singleLink.href}
