@@ -17,18 +17,15 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
             <HeadSeo
                 seoData={seoData}
             />
-            <div className="main-container">
-                <div className="wrapper">
-                    <div>
-                        {Object.entries(metadata).map( ([key, value]) =>
-                            <p key={generateUUID(key)}>{value}</p>
-                        )}
-                    </div>
-                    <div>
-                        {parse(micromark(content))}
-                    </div>
-                </div>
+            <div>
+                {Object.entries(metadata).map( ([key, value]) =>
+                    <p key={generateUUID(key)}>{value}</p>
+                )}
             </div>
+            <div>
+                {parse(micromark(content))}
+            </div>
+
         </>
     )
 }
