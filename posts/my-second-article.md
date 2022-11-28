@@ -4,7 +4,7 @@
     "title": "My second article",
     "author": "Marco Rapaccini",
     "date": "2022-11-30",
-    "bannerImage": "url-to-image.png",
+    "bannerImage": "/url-to-image.png",
     "tags": ["tag1", "tag2"]
 }
 ```

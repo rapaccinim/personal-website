@@ -4,7 +4,7 @@
     "title": "My first article",
     "author": "Marco Rapaccini",
     "date": "2022-11-26",
-    "bannerImage": "url-to-image.png",
+    "bannerImage": "/posts-media/software-architecture-for-web-developers-marco-rapaccini-review.webp",
     "tags": ["tag1", "tag2"]
 }
 ```
