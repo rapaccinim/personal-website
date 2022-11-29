@@ -1,16 +1,16 @@
+import Wrapper from "./wrapper/Wrapper";
+
 const Footer = () => {
 
     return (
         <footer>
-            <div
-                className="wrapper"
-            >
+            <Wrapper>
                 <div
                     className="footer-message"
                 >
                     🍪 This is a cookie-free website!
                 </div>
-            </div>
+            </Wrapper>
         </footer>
     )
 

@@ -4,8 +4,7 @@
     margin: 1rem 0;
 }
 .headerWrapper {
-    max-width: 50rem;
-    width: calc(50vw - 2.5rem);
+    composes: wrapper from "../wrapper/Wrapper.module.css";
     justify-content: space-around;
     display: flex;
     border-bottom: 1px solid #eaeaea;

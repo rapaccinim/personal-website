@@ -1,0 +1,16 @@
+.wrapper {
+    max-width: 50rem;
+    width: calc(50vw - 2.5rem);
+}
+@media (max-width: 900px) and (min-width: 401px){
+    .wrapper {
+        max-width: 60rem;
+        width: calc(80vw - 2.5rem);
+    }
+}
+@media (max-width: 400px) {
+    .wrapper {
+        max-width: 80rem;
+        width: calc(100vw - 2.5rem);
+    }
+}
