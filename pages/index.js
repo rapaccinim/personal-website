@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css'
+import styles from '../styles/home.module.css'
 import HeadSEO from "../components/head-seo";
 
 const Home = () => {
