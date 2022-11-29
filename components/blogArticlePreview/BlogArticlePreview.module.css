@@ -1,0 +1,10 @@
+.article {
+    align-self: flex-start;
+    margin: 1rem 0;
+}
+.tags span {
+    margin-right: 0.5rem;
+}
+.title {
+    margin: 0.5rem 0;
+}

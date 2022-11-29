@@ -1,6 +1,6 @@
 import fs from 'fs';
 import {generateUUID, getPostObject, getSlug} from "../utils/utils";
-import BlogArticle from "../components/blog-article";
+import BlogArticlePreview from "../components/blogArticlePreview/BlogArticlePreview";
 import HeadSeo from "../components/head-seo";
 import {POSTS_FOLDER_NAME} from "../config/config";
 
@@ -21,7 +21,7 @@ const Blog = ({posts}) => {
                 {posts
                     .sort((post, anotherPost) => new Date(anotherPost.metadata.date) - new Date(post.metadata.date))
                     .map(post =>
-                        <BlogArticle
+                        <BlogArticlePreview
                             key={generateUUID()}
                             metadata={post.metadata}
                             slug={post.slug}
