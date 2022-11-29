@@ -5,6 +5,7 @@
     "author": "Marco Rapaccini",
     "date": "2022-11-30",
     "bannerImage": "/url-to-image.png",
+    "bannerImageAlt": "test test",
     "tags": ["tag1", "tag2"]
 }
 ```

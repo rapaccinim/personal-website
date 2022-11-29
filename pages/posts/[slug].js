@@ -30,7 +30,7 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
                 <Image
                     src={imgSrc || DEFAULT_OG_PIC}
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="contain"
                     onLoadingComplete={(result) => {
                         if (result.naturalWidth === 0) {
                             // Broken image
