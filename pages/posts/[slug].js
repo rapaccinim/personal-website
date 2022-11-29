@@ -5,15 +5,11 @@ import {micromark} from "micromark";
 import HeadSeo from "../../components/head-seo";
 import {DEFAULT_OG_PIC, POSTS_FOLDER_NAME} from "../../config/config";
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const Post = ({metadata, content, postsFolderAndSlug}) => {
-    const {title, author, date, bannerImage, tags} = metadata
+    const {title, author, date, bannerImage, bannerImageAlt, tags} = metadata
     const [imgSrc, setImgSrc] = useState(bannerImage || "");
-
-    // useEffect(() => {
-    //     setImgSrc(bannerImage);
-    // }, [bannerImage]);
 
     const seoData = {
         title: title,
@@ -25,14 +21,16 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
             <HeadSeo
                 seoData={seoData}
             />
-            <article>
+            <article
+                className="blog-article-content"
+            >
                 <div
                     className="image-container"
                 >
                 <Image
                     src={imgSrc || DEFAULT_OG_PIC}
                     layout="fill"
-                    objectFit="contain"
+                    objectFit="cover"
                     onLoadingComplete={(result) => {
                         if (result.naturalWidth === 0) {
                             // Broken image
@@ -40,6 +38,7 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
                         }
                     }}
                     onError={ () => setImgSrc(DEFAULT_OG_PIC) }
+                    alt={bannerImageAlt}
                 />
                 </div>
                 <div>
@@ -51,8 +50,6 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
                     <p key={generateUUID(key)}>{value}</p>
                 )}
             </div>
-
-
         </>
     )
 }
