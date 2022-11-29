@@ -21,9 +21,7 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
             <HeadSeo
                 seoData={seoData}
             />
-            <article
-                className="blog-article-content"
-            >
+            <article>
                 <div
                     className="image-container"
                 >
