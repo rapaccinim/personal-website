@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import {generateUUID} from "../utils/utils";
+import {generateUUID} from "../../utils/utils";
+import styles from "./Header.module.css"
 
 const Header = () => {
 
@@ -23,12 +24,14 @@ const Header = () => {
     ];
 
     return(
-        <header>
+        <header
+            className={styles.header}
+        >
             <div
-                className="wrapper"
+                className={styles.headerWrapper}
             >
                 <div
-                    className="header-logo"
+                    className={styles.headerLogo}
                 >
                     <Link
                         href="/"
@@ -36,7 +39,7 @@ const Header = () => {
                         passHref
                     >
                         <div
-                            className="logo-wrapper"
+                            className={styles.logoWrapper}
                         >
                             <Image
                                 src="/marco-rapaccini-web-product-development-header-logo.webp"
@@ -47,7 +50,9 @@ const Header = () => {
                         </div>
                     </Link>
                 </div>
-                <nav>
+                <nav
+                    className={styles.nav}
+                >
                     {
                         headerLinksLists.map( link  =>
                             <Link

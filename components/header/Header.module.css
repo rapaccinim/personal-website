@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.headerWrapper {
+    max-width: 50rem;
+    width: calc(50vw - 2.5rem);
+    justify-content: space-around;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+}
+.headerLogo{
+    display: flex;
+    flex: 1;
+}
+.logoWrapper {
+    cursor: pointer;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav a {
+    margin-left: 1rem;
+}
