@@ -3,13 +3,11 @@ import {generateUUID, getPostObject, getSlug} from "../../utils/utils";
 import parse from "html-react-parser";
 import {micromark} from "micromark";
 import HeadSeo from "../../components/head-seo";
-import {DEFAULT_OG_PIC, POSTS_FOLDER_NAME} from "../../config/config";
-import Image from "next/image";
-import {useState} from "react";
+import {POSTS_FOLDER_NAME} from "../../config/config";
+import ErrorHandlingImage from "../../components/errorHandlingImage/ErrorHandlingImage";
 
 const Post = ({metadata, content, postsFolderAndSlug}) => {
     const {title, author, date, bannerImage, bannerImageAlt, tags} = metadata
-    const [imgSrc, setImgSrc] = useState(bannerImage || "");
 
     const seoData = {
         title: title,
@@ -22,23 +20,10 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
                 seoData={seoData}
             />
             <article>
-                <div
-                    className="image-container"
-                >
-                <Image
-                    src={imgSrc || DEFAULT_OG_PIC}
-                    layout="fill"
-                    objectFit="contain"
-                    onLoadingComplete={(result) => {
-                        if (result.naturalWidth === 0) {
-                            // Broken image
-                            setImgSrc(DEFAULT_OG_PIC);
-                        }
-                    }}
-                    onError={ () => setImgSrc(DEFAULT_OG_PIC) }
-                    alt={bannerImageAlt}
+                <ErrorHandlingImage
+                    img={bannerImage}
+                    imgAlt={bannerImageAlt}
                 />
-                </div>
                 <div>
                     {parse(micromark(content))}
                 </div>

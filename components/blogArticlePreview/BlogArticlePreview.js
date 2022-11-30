@@ -20,11 +20,15 @@ const BlogArticlePreview = ({metadata, slug}) => {
                     <div>
                         <h2
                             className={styles.title}
-                        >{title}</h2>
+                        >
+                            {title}
+                        </h2>
                     </div>
                 </a>
             </Link>
-            <span>{date}</span>
+            <span>
+                {date}
+            </span>
         </article>
     )
 }
