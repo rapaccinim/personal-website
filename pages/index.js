@@ -6,7 +6,7 @@ const Home = () => {
     const seoData = {
         title: "Home",
         description: "Marco Rapaccini - Web & Product Development for your idea",
-        pageURL: "home"
+        pageURL: "home",
     }
 
   const linksList = [

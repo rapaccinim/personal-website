@@ -8,11 +8,11 @@ import ErrorHandlingImage from "../../components/errorHandlingImage/ErrorHandlin
 
 const Post = ({metadata, content, postsFolderAndSlug}) => {
     const {title, author, date, bannerImage, bannerImageAlt, tags} = metadata
-
     const seoData = {
         title: title,
         description: "Blog article",
-        pageURL: postsFolderAndSlug
+        pageURL: postsFolderAndSlug,
+        imageURL: bannerImage
     }
     return (
         <>
