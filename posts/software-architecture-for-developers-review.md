@@ -6,6 +6,7 @@
     "date": "2022-12-01",
     "bannerImage": "/posts-media/software-architecture-for-web-developers-marco-rapaccini-review.webp",
     "bannerImageAlt": "marco rapaccini web product development book review software architecture for web developers",
+    "description": "A review about an interesting book that will help web developers to understand architectural concepts and future opportunities",
     "tags": ["books", "learning", "software"]
 }
 ```

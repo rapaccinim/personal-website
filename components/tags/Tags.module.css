@@ -1,0 +1,7 @@
+.tagsContainer{
+    display: flex;
+}
+.tag {
+    display: inline;
+    margin-right: 0.5rem;
+}

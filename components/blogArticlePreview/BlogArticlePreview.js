@@ -1,18 +1,16 @@
-import {generateUUID} from "../../utils/utils";
 import Link from "next/link";
 import styles from "./BlogArticlePreview.module.css"
+import Tags from "../tags/Tags";
 
 const BlogArticlePreview = ({metadata, slug}) => {
-    const {title, author, date, bannerImage, tags} = metadata
+    const {title, date, tags} = metadata
     return (
         <article
             className={styles.article}
         >
-            <div
-                className={styles.tags}
-            >
-                {tags.map( tag => <span key={generateUUID()}>{tag}</span>)}
-            </div>
+            <Tags
+                tags={tags}
+            />
             <Link
                 href={`/posts/${slug}`}
             >

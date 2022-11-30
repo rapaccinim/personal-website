@@ -1,7 +1,6 @@
 import styles from "./Wrapper.module.css";
 
-const Wrapper = ({children, type}) => {
-    console.log("Type: ", type)
+const Wrapper = ({children}) => {
     return(
         <div
             className={styles.wrapper}

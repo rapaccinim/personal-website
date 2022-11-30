@@ -1,16 +1,18 @@
 import fs from "fs";
-import {generateUUID, getPostObject, getSlug} from "../../utils/utils";
+import {getPostObject, getSlug} from "../../utils/utils";
 import parse from "html-react-parser";
 import {micromark} from "micromark";
 import HeadSeo from "../../components/head-seo";
 import {POSTS_FOLDER_NAME} from "../../config/config";
 import ErrorHandlingImage from "../../components/errorHandlingImage/ErrorHandlingImage";
+import Tags from "../../components/tags/Tags";
+import styles from "../../styles/Slug.module.css"
 
 const Post = ({metadata, content, postsFolderAndSlug}) => {
-    const {title, author, date, bannerImage, bannerImageAlt, tags} = metadata
+    const {title, date, bannerImage, bannerImageAlt, tags, description} = metadata
     const seoData = {
         title: title,
-        description: "Blog article",
+        description: description,
         pageURL: postsFolderAndSlug,
         imageURL: bannerImage
     }
@@ -24,15 +26,22 @@ const Post = ({metadata, content, postsFolderAndSlug}) => {
                     img={bannerImage}
                     imgAlt={bannerImageAlt}
                 />
+                <div
+                    className={styles.metadata}
+                >
+                    <div
+                        className={styles.date}
+                    >
+                        {date}
+                    </div>
+                    <Tags
+                        tags={tags}
+                    />
+                </div>
                 <div>
                     {parse(micromark(content))}
                 </div>
             </article>
-            <div>
-                {Object.entries(metadata).map( ([key, value]) =>
-                    <p key={generateUUID(key)}>{value}</p>
-                )}
-            </div>
         </>
     )
 }
