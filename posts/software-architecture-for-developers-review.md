@@ -69,10 +69,10 @@ That is not correct, since there are some theoretical and practical differences 
 ### Chapter 6 - Types of Architects and Their Focus
 Do you know what the following Architect-related roles are responsible for?
 * _Enterprise Architect_
-* _System Architects_
-* _Software Architects_
-* _Solution Architects_
-* _Application Architects_
+* _System Architect_
+* _Software Architect_
+* _Solution Architect_
+* _Application Architect_
 
 ### Chapter 7 - Leveraging Soft Skills
 Probably my favourite chapter because soft skills are more than necessary to work together in an efficient and natural way.
