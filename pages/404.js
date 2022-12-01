@@ -2,12 +2,23 @@ import Link from 'next/link'
 import Image from "next/image";
 import gif from "/public/404-page-not-found-marco-rapaccini-web-product-development.gif"
 import styles from "../styles/404.module.css"
+import HeadSEO from "../components/head-seo";
 
 const SeparationTildes = () => <p className={styles.separationTildes}>~ ~ ~</p>;
 
 const Custom404 = () => {
+
+    const seoData = {
+        title: "Page not found",
+        description: "404 - Can't find this page",
+        pageURL: "404",
+    }
+
     return(
         <>
+            <HeadSEO
+                seoData={seoData}
+            />
             <h1>404 - Page Not Found</h1>
             <div
                 className={styles.gif}
