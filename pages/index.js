@@ -15,6 +15,7 @@ const Home = () => {
         '💻 Hi, I am human being working with software since 2016',
         '✨ I transform a vision into human-friendly, working technology',
         '👇 Scroll down and explore my world',
+        '🌲 This is a minimalist website with low impact on the environment'
     ];
 
     const linksList = [
@@ -64,7 +65,7 @@ const Home = () => {
                 Web &amp; Product Development
             </h1>
             <div>
-                {bulletPoints.map( bulletPoint =>
+                {bulletPoints.map( (bulletPoint, index) => index <=2 &&
                     <p
                         className={styles.bulletPoint}
                         key={generateUUID(bulletPoint)}
@@ -94,7 +95,7 @@ const Home = () => {
                 <p
                     className={styles.bulletPoint}
                 >
-                    🌲 This is a minimalist website with low impact on the environment
+                    {bulletPoints[3]}
                 </p>
                 <Carbonbadge
                     darkMode={true}
