@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.headerWrapper {
+    composes: wrapper from "../wrapper/Wrapper.module.css";
+    justify-content: space-around;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+}
+.headerLogo{
+    display: flex;
+    flex: 1;
+}
+.logoWrapper {
+    cursor: pointer;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav a {
+    margin-left: 1rem;
+}

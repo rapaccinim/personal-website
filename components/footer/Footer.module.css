@@ -1,0 +1,10 @@
+.footer {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+.footerMessage {
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    padding: 1rem 0;
+}
