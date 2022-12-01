@@ -1,136 +1,107 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import HeadSEO from "../components/head-seo";
 import Carbonbadge from "react-carbonbadge"
+import {generateUUID} from "../utils/utils";
 
 const Home = () => {
 
-  const linksList = [
-    {
-      href: 'https://www.linkedin.com/in/marco-rapaccini/?locale=en_US',
-      title: '🔗 LinkedIn',
-      description: 'Join my professional network and learn something new everyday',
-      ariaLabel: 'Connect with me on LinkedIn',
-    },
-    {
-      href: 'https://github.com/rapaccinim',
-      title: '🐈 GitHub',
-      description: 'Have a look at my code base repos: interesting or boring stuff. But, hey, it compiles!',
-      ariaLabel: 'Connect with me on GitHub',
-    },
-    {
-      href: 'https://rapaccinim.medium.com/',
-      title: '✍️ Medium',
-      description: 'Read my latest blog articles about software engineering on Medium',
-      ariaLabel: 'Connect with me on Medium',
-    },
-    {
-      href: 'https://twitter.com/@rapaccinim',
-      title: '🐦 Twitter',
-      description: 'Follow me to be updated on latest tech trends and random stuff',
-      ariaLabel: 'Connect with me on Twitter',
-    },
-  ];
+    const seoData = {
+        title: "Home",
+        description: "Marco Rapaccini - Web & Product Development for your idea",
+        pageURL: "home",
+    }
 
-  const footerLinksLists = [
-    {
-      href: 'https://www.google.co.uk/maps/place/New+Inn+Yard,+Kendal/@54.3255514,-2.748753,19.81z/',
-      title: '🏢 Office',
-      ariaLabel: 'See where my office is on Google Maps',
-    },
-    {
-      href: 'https://github.com/rapaccinim/rapaccinim#marco-rapaccini',
-      title: '💼 My CV',
-      ariaLabel: 'Read my CV on GitHub',
-    },
-  ];
+    const bulletPoints = [
+        '💻 Hi, I am human being working with software since 2016',
+        '✨ I transform a vision into human-friendly, working technology',
+        '👇 Scroll down and explore my world',
+        '🌲 This is a minimalist website with low impact on the environment'
+    ];
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>
-          Marco Rapaccini - Web &amp; Product Development
-        </title>
-        <meta
-            name="description"
-            content="Marco Rapaccini - Web and Product Development"
-        />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <link
-            rel="icon"
-            href="/favicon.ico"
-        />
-      </Head>
-      <main className={styles.main}>
-        <Image
-            src="/marco-rapaccini-web-product-developer-logo.jpg"
-            alt="Marco Rapaccini - Web and Product Development logo"
-            width={301}
-            height={127}
-        />
-        <h1
-            className={styles.title}
-        >
-          Marco Rapaccini
-          <br/>
-          Web &amp; Product Development
-        </h1>
-        <p
-            className={styles.description}
-        >
-          ✨ I transform a vision into human-friendly, working technology
-        </p>
-        <p
-            className={styles.description}
-        >
-          🌲 This is a minimalist website with low impact on the environment
-        </p>
-        <Carbonbadge darkMode={true} />
-        <p
-            className={styles.description}
-        >
-          📥 <b>Connect with me</b>, have a look at the following links 👇
-        </p>
-        <div
-          className={styles.grid}
-        >
-          {linksList.map(singleLink =>
-            <a
-                href={singleLink.href}
-                className={styles.card}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={singleLink.ariaLabel}
-                key={singleLink.href}
+    const linksList = [
+        {
+            href: 'blog',
+            title: '✍️ Blog',
+            description: 'My digital garden with seeds about life, code and other stuff',
+            ariaLabel: 'Read my blog articles on this website',
+            target: '_self',
+        },
+        {
+            href: 'https://www.linkedin.com/in/marco-rapaccini/?locale=en_US',
+            title: '🔗 LinkedIn',
+            description: 'Probably the best way to contact me',
+            ariaLabel: 'Connect with me on LinkedIn',
+        },
+        {
+            href: 'https://github.com/rapaccinim',
+            title: '🐈 GitHub',
+            description: 'Hey, it compiles! Wait, why?',
+            ariaLabel: 'Connect with me on GitHub',
+        },
+        {
+            href: 'https://rapaccinim.medium.com/',
+            title: '📖️ Medium',
+            description: 'Read my technical articles on Medium',
+            ariaLabel: 'Follow me on Medium',
+        },
+        {
+            href: 'https://twitter.com/@rapaccinim',
+            title: '🐦 Twitter',
+            description: "I don't have a blue check but I post good content",
+            ariaLabel: 'Connect with me on Twitter',
+        },
+    ];
+
+    return (
+        <>
+            <HeadSEO
+                seoData={seoData}
+            />
+            <h1
+                className={styles.title}
             >
-              <h2>{singleLink.title} &rarr;</h2>
-              <p>{singleLink.description}</p>
-            </a>
-          )}
-        </div>
-      </main>
-      <footer
-          className={styles.footer}
-      >
-        {footerLinksLists.map( singleFooterLink =>
-          <div
-              key={singleFooterLink.href}
-          >
-            <a
-                href={singleFooterLink.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={singleFooterLink.ariaLabel}
+                Marco Rapaccini
+                <br/>
+                Web &amp; Product Development
+            </h1>
+            <div>
+                {bulletPoints.map( (bulletPoint, index) => index <=2 &&
+                    <p
+                        className={styles.bulletPoint}
+                        key={generateUUID(bulletPoint)}
+                    >
+                        {bulletPoint}
+                    </p>
+                )}
+            </div>
+            <div
+                className={styles.grid}
             >
-              {singleFooterLink.title}
-            </a>
-          </div>
-        )}
-      </footer>
-    </div>
-  )
+                {linksList.map(singleLink =>
+                    <a
+                        href={singleLink.href}
+                        className={styles.card}
+                        target={singleLink.target || "_blank"}
+                        rel="noopener noreferrer"
+                        aria-label={singleLink.ariaLabel}
+                        key={singleLink.href}
+                    >
+                        <h2>{singleLink.title} &rarr;</h2>
+                        <p>{singleLink.description}</p>
+                    </a>
+                )}
+            </div>
+            <div>
+                <p
+                    className={styles.bulletPoint}
+                >
+                    {bulletPoints[3]}
+                </p>
+                <Carbonbadge
+                    darkMode={true}
+                />
+            </div>
+        </>
+    )
 }
-export default Home
+export default Home;

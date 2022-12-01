@@ -1,0 +1,7 @@
+.metadata {
+    display: flex;
+    justify-content: space-around;
+}
+.date {
+    flex: 1;
+}
