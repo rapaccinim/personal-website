@@ -38,9 +38,7 @@ const Custom404 = () => {
             <p>- Marcus Aurelius</p>
             <SeparationTildes/>
             <Link href="/">
-                <a>
-                    Come back home, Lassie
-                </a>
+                Come back home, Lassie
             </Link>
         </>
     )
