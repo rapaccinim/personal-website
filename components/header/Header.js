@@ -43,8 +43,8 @@ const Header = () => {
                         >
                             <Image
                                 src="/marco-rapaccini-web-product-development-header-logo.webp"
-                                width="40px"
-                                height="40px"
+                                width="40"
+                                height="40"
                                 alt="Marco Rapaccini Web Product Development Header Logo"
                             />
                         </div>
