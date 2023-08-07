@@ -5,7 +5,7 @@ const nextConfig = {
     defaultLocale: "en",
   },
   reactStrictMode: true,
-  webpack: (config, options) => {
+  webpack: (config,) => {
     config.module.rules.push({
       test: /\.md/,
       type: "asset/source",
