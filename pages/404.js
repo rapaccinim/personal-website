@@ -14,33 +14,34 @@ const Custom404 = () => {
         pageURL: "404",
     }
 
-    return(
-        <>
-            <HeadSEO
-                seoData={seoData}
-            />
-            <h1>404 - Page Not Found</h1>
-            <div
-                className={styles.gif}
-            >
-                <Image
-                    src={gif}
-                    alt="404 page not found marco rapaccini web product development"
-                    width="640px"
-                    height="360px"
-                />
-            </div>
-            <SeparationTildes/>
-            <p>
-                Here is a rule to remember in future, when anything tempts you to feel bitter: not <i>This is misfortune</i>,
-                but <i>To bear this worthily is good fortune</i>.
-            </p>
-            <p>- Marcus Aurelius</p>
-            <SeparationTildes/>
-            <Link href="/">
-                Come back home, Lassie
-            </Link>
-        </>
-    )
+    return <>
+        <HeadSEO
+            seoData={seoData}
+        />
+        <h1>404 - Page Not Found</h1>
+        <div
+            className={styles.gif}
+        >
+            <Image
+                src={gif}
+                alt="404 page not found marco rapaccini web product development"
+                width="640px"
+                height="360px"
+                style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                }} />
+        </div>
+        <SeparationTildes/>
+        <p>
+            Here is a rule to remember in future, when anything tempts you to feel bitter: not <i>This is misfortune</i>,
+            but <i>To bear this worthily is good fortune</i>.
+        </p>
+        <p>- Marcus Aurelius</p>
+        <SeparationTildes/>
+        <Link href="/">
+            Come back home, Lassie
+        </Link>
+    </>;
 }
 export default Custom404;

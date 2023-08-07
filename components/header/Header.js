@@ -23,7 +23,7 @@ const Header = () => {
         }
     ];
 
-    return(
+    return (
         <header
             className={styles.header}
         >
@@ -46,7 +46,10 @@ const Header = () => {
                                 width="40"
                                 height="40"
                                 alt="Marco Rapaccini Web Product Development Header Logo"
-                            />
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                     </Link>
                 </div>
@@ -67,6 +70,6 @@ const Header = () => {
                 </nav>
             </div>
         </header>
-    )
+    );
 }
 export default Header;
