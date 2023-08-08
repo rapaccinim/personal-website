@@ -14,15 +14,13 @@ const BlogArticlePreview = ({metadata, slug}) => {
             <Link
                 href={`/posts/${slug}`}
             >
-                <a>
-                    <div>
-                        <h2
-                            className={styles.title}
-                        >
-                            {title}
-                        </h2>
-                    </div>
-                </a>
+                <div>
+                    <h2
+                        className={styles.title}
+                    >
+                        {title}
+                    </h2>
+                </div>
             </Link>
             <span>
                 {date}

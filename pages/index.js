@@ -9,14 +9,23 @@ const Home = () => {
         title: "Home",
         description: "Marco Rapaccini - Web & Product Development for your idea",
         pageURL: "home",
-    }
+    };
 
-    const bulletPoints = [
-        '💻 Hi, I am human being working with software since 2016',
-        '✨ I transform a vision into human-friendly, working technology',
-        '👇 Scroll down and explore my world',
-        '🌲 This is a minimalist website with low impact on the environment'
-    ];
+    const bulletPoints = {
+        intro: [
+            '💻 Hi, I am human being working with software since 2016',
+            '✨ I transform a vision into human-friendly, working technology',
+        ],
+        services: [
+            '🔣 Custom Software Development',
+            '📶 IoT & Wearables Prototyping',
+            '🆕 Digital Transition Consulting',
+            '🆙 Tech Booster for Startups & SMEs',
+            '🆒 Web Applications Artisan',
+        ],
+        scrollDown: '👇 Scroll down and explore my world',
+        bottom: '🌲 This is a minimalist website with low impact on the environment',
+    };
 
     const linksList = [
         {
@@ -65,14 +74,38 @@ const Home = () => {
                 Web &amp; Product Development
             </h1>
             <div>
-                {bulletPoints.map( (bulletPoint, index) => index <=2 &&
+                {bulletPoints.intro.map(introBulletPoint => introBulletPoint &&
                     <p
                         className={styles.bulletPoint}
-                        key={generateUUID(bulletPoint)}
+                        key={generateUUID(introBulletPoint)}
                     >
-                        {bulletPoint}
+                        {introBulletPoint}
                     </p>
                 )}
+                <p
+                    className={styles.bulletPoint}
+                >
+                    👇 See below my <span className={styles.servicesWord}>services</span>
+                </p>
+            </div>
+            <div
+                className={styles.servicesSection}
+            >
+                {bulletPoints.services.map(service => service &&
+                    <p
+                        className={`${styles.bulletPoint} ${styles.service}`}
+                        key={generateUUID(service)}
+                    >
+                        {service}
+                    </p>
+                )}
+            </div>
+            <div>
+                <p
+                    className={styles.bulletPoint}
+                >
+                    {bulletPoints.scrollDown}
+                </p>
             </div>
             <div
                 className={styles.grid}
@@ -95,7 +128,7 @@ const Home = () => {
                 <p
                     className={styles.bulletPoint}
                 >
-                    {bulletPoints[3]}
+                    {bulletPoints.bottom}
                 </p>
                 <Carbonbadge
                     darkMode={true}

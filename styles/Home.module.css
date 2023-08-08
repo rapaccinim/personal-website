@@ -18,6 +18,23 @@
   font-size: 1.5rem;
 }
 
+.servicesWord {
+  color: #091c4f;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
+.servicesSection {
+  border-left: 2px dashed #091c4f;
+  padding-left: 10px;
+  margin: 3rem 0;
+}
+
+.service {
+  color: #091c4f;
+  font-size: 1.7rem;
+}
+
 .grid {
   display: flex;
   align-items: center;
