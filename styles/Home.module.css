@@ -13,6 +13,9 @@
   padding: 2rem 0;
   text-align: center;
 }
+.profilePic {
+  text-align: center;
+}
 .bulletPoint {
   line-height: 1.5;
   font-size: 1.5rem;
