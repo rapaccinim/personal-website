@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import HeadSEO from "../components/head-seo";
 import Carbonbadge from "react-carbonbadge"
 import {generateUUID} from "../utils/utils";
+import Image from "next/image";
 
 const Home = () => {
 
@@ -10,6 +11,8 @@ const Home = () => {
         description: "Marco Rapaccini - Web & Product Development for your idea",
         pageURL: "home",
     };
+
+    const PROFILE_PIC = "/marco-rapaccini-profile-picture-web-product-development.webp";
 
     const bulletPoints = {
         intro: [
@@ -73,6 +76,16 @@ const Home = () => {
                 <br/>
                 Web &amp; Product Development
             </h1>
+            <div
+                className={styles.profilePic}
+            >
+                <Image
+                    src={PROFILE_PIC}
+                    alt="Marco Rapaccini Web & Product Development - Profile Picture"
+                    width={150}
+                    height={150}
+                />
+            </div>
             <div>
                 {bulletPoints.intro.map(introBulletPoint => introBulletPoint &&
                     <p
