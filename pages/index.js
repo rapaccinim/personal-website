@@ -12,7 +12,10 @@ const Home = () => {
         pageURL: "home",
     };
 
-    const PROFILE_PIC = "/marco-rapaccini-profile-picture-web-product-development.webp";
+    const pictures = {
+        profile: "/marco-rapaccini-profile-picture-web-product-development.webp",
+        chamber: "/marco-rapaccini-member-of-cumbria-chamber-of-commerce.webp",
+    };
 
     const bulletPoints = {
         intro: [
@@ -77,10 +80,10 @@ const Home = () => {
                 Web &amp; Product Development
             </h1>
             <div
-                className={styles.profilePic}
+                className={styles.centralPic}
             >
                 <Image
-                    src={PROFILE_PIC}
+                    src={pictures.profile}
                     alt="Marco Rapaccini Web & Product Development - Profile Picture"
                     width={150}
                     height={150}
@@ -136,6 +139,16 @@ const Home = () => {
                         <p>{singleLink.description}</p>
                     </a>
                 )}
+            </div>
+            <div
+                className={styles.centralPic}
+            >
+                <Image
+                    src={pictures.chamber}
+                    alt="Marco Rapaccini is a Member of the Cumbria Chamber of Commerce"
+                    width={150}
+                    height={210}
+                />
             </div>
             <div>
                 <p
