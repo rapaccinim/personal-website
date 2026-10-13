@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from "next/image";
-import gif from "/public/404-page-not-found-marco-rapaccini-web-product-development.gif"
+import gif from "../public/404-page-not-found-marco-rapaccini-web-product-development.gif"
 import styles from "../styles/404.module.css"
 import HeadSEO from "../components/head-seo";
 
@@ -24,9 +24,7 @@ const Custom404 = () => {
         >
             <Image
                 src={gif}
-                alt="404 page not found marco rapaccini web product development"
-                width="640px"
-                height="360px"
+                alt="404 page not found"
                 style={{
                     maxWidth: "100%",
                     height: "auto"
